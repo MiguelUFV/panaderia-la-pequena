@@ -4,15 +4,23 @@
     <!-- Metadatos Básicos y SEO Crítico -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panadería La Pequeña | Palmeritas de Morata y Pan Tradicional en Chamberí</title>
-    <meta name="description" content="La tahona de toda la vida en Chamberí (Madrid). Famosos por nuestras Palmeritas de Morata, Rosquillas de Alcalá, empanadas caseras y pan tradicional recién horneado.">
-    
+    <title>Palmeritas de Morata en Madrid | Panadería La Pequeña · Chamberí</title>
+    <meta name="description" content="Las auténticas Palmeritas de Morata en Madrid, en Panadería La Pequeña (Chamberí). Bañadas en chocolate fondant, hechas a diario. También empanada casera, Rosquillas de Alcalá y Pastas de Té artesanales. C/ Covarrubias 33.">
+    <meta name="keywords" content="palmeritas de morata madrid, palmeritas de morata chamberí, palmeritas de morata con chocolate, panadería chamberí, tahona chamberí, rosquillas de alcalá madrid, empanada casera madrid, pastas de té madrid, panadería covarrubias">
+
     <!-- Open Graph (Compartir en Redes Sociales) -->
-    <meta property="og:title" content="Panadería La Pequeña - Tradición en Madrid">
-    <meta property="og:description" content="Tu panadería de barrio. Pastas de té, empanadas caseras y las auténticas Palmeritas de Morata. Reserva ahora.">
-    <meta property="og:image" content="https://panaderialapequena.es/foto_fachada.jpg">
+    <meta property="og:title" content="Las auténticas Palmeritas de Morata en Madrid — Panadería La Pequeña">
+    <meta property="og:description" content="Bañadas en chocolate fondant y hechas a diario. Las Palmeritas de Morata más buscadas de Madrid, en Chamberí. También empanada casera, Rosquillas de Alcalá y Pastas de Té.">
+    <meta property="og:image" content="https://panaderialapequena.es/foto_palmeritas.jpg">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_ES">
+    <meta property="og:url" content="https://panaderialapequena.es">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Las auténticas Palmeritas de Morata en Madrid — Panadería La Pequeña">
+    <meta name="twitter:description" content="Bañadas en chocolate fondant, hechas a diario en Chamberí. Las más buscadas de Madrid.">
+    <meta name="twitter:image" content="https://panaderialapequena.es/foto_palmeritas.jpg">
 
     <!-- Schema.org JSON-LD para SEO Local -->
     <script type="application/ld+json">
@@ -62,6 +70,53 @@
         "@type": "AggregateRating",
         "ratingValue": "4.9",
         "reviewCount": "124"
+      },
+      "servesCuisine": "Panadería artesanal española",
+      "hasMenu": {
+        "@type": "Menu",
+        "name": "Especialidades de La Pequeña",
+        "hasMenuSection": [
+          {
+            "@type": "MenuSection",
+            "name": "Nuestra Especialidad",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Palmeritas de Morata con Chocolate",
+                "description": "Las auténticas Palmeritas de Morata bañadas en chocolate fondant. Especialidad estrella de la casa, elaboradas a diario de forma artesanal.",
+                "offers": { "@type": "Offer", "priceCurrency": "EUR" }
+              }
+            ]
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Salado",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Empanada de Atún Casera",
+                "description": "Masa fina e interior súper jugoso. Elaborada a diario.",
+                "offers": { "@type": "Offer", "price": "15.95", "priceCurrency": "EUR", "unitText": "kg" }
+              }
+            ]
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Pastelería y Dulces",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Rosquillas de Alcalá",
+                "offers": { "@type": "Offer", "price": "34.00", "priceCurrency": "EUR", "unitText": "kg" }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Pastas de Té artesanales",
+                "offers": { "@type": "Offer", "price": "32.00", "priceCurrency": "EUR", "unitText": "kg" }
+              }
+            ]
+          }
+        ]
       }
     }
     </script>
@@ -153,9 +208,10 @@
 
                 <nav class="hidden md:flex space-x-8 items-center bg-darkbg/50 backdrop-blur-md px-6 py-2 rounded-full border border-gold/20" :class="scrolled ? 'bg-darkbg/90 text-cream border-gold/30' : 'text-cream'">
                     <a href="#nosotros" class="text-xs uppercase tracking-widest font-medium hover:text-gold transition-colors">Nosotros</a>
-                    <a href="#especialidades" class="text-xs uppercase tracking-widest font-medium hover:text-gold transition-colors">Dulces</a>
+                    <a href="#palmeritas" class="text-xs uppercase tracking-widest font-medium hover:text-gold transition-colors text-gold">Palmeritas</a>
+                    <a href="#especialidades" class="text-xs uppercase tracking-widest font-medium hover:text-gold transition-colors">Mostrador</a>
                     <a href="#experiencia" class="text-xs uppercase tracking-widest font-medium hover:text-gold transition-colors">Opiniones</a>
-                    <a href="https://wa.me/34656614876?text=Hola,%20quer%C3%ADa%20hacer%20un%20encargo" class="px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest transition-all shadow-lg hover:scale-105" 
+                    <a href="https://wa.me/34656614876?text=Hola,%20quer%C3%ADa%20hacer%20un%20encargo" class="px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest transition-all shadow-lg hover:scale-105"
                        :class="scrolled ? 'bg-gold text-darkbg border border-gold' : 'bg-transparent text-gold border border-gold hover:bg-gold hover:text-darkbg'">
                         Reservar
                     </a>
@@ -182,7 +238,8 @@
              class="md:hidden absolute top-full left-0 w-full bg-darkbg/95 backdrop-blur-xl shadow-2xl border-t border-gold/10 p-4 rounded-b-3xl">
             <div class="flex flex-col space-y-3 p-2">
                 <a @click="mobileMenuOpen = false" href="#nosotros" class="block px-4 py-3 text-sm uppercase tracking-widest font-medium text-cream rounded-xl hover:bg-white/5 active:bg-white/10 transition-colors">Nosotros</a>
-                <a @click="mobileMenuOpen = false" href="#especialidades" class="block px-4 py-3 text-sm uppercase tracking-widest font-medium text-cream rounded-xl hover:bg-white/5 active:bg-white/10 transition-colors">Dulces y Salados</a>
+                <a @click="mobileMenuOpen = false" href="#palmeritas" class="block px-4 py-3 text-sm uppercase tracking-widest font-bold text-gold rounded-xl hover:bg-white/5 active:bg-white/10 transition-colors">★ Palmeritas de Morata</a>
+                <a @click="mobileMenuOpen = false" href="#especialidades" class="block px-4 py-3 text-sm uppercase tracking-widest font-medium text-cream rounded-xl hover:bg-white/5 active:bg-white/10 transition-colors">Mostrador</a>
                 <a @click="mobileMenuOpen = false" href="#experiencia" class="block px-4 py-3 text-sm uppercase tracking-widest font-medium text-cream rounded-xl hover:bg-white/5 active:bg-white/10 transition-colors">Opiniones</a>
                 <a @click="mobileMenuOpen = false" href="https://wa.me/34656614876" class="mt-4 block w-full text-center px-6 py-4 bg-gold text-darkbg text-sm tracking-widest uppercase font-bold rounded-2xl shadow-lg active:scale-95 transition-transform">
                     Reservar Pedido
@@ -259,7 +316,92 @@
             </div>
         </section>
 
-        <!-- D. Especialidades Reales del Mostrador (Bento Asimétrico) -->
+        <!-- D. Sección Palmeritas de Morata — SEO Hero -->
+        <section id="palmeritas" class="py-16 md:py-28 bg-darkbg border-t border-white/5 relative overflow-hidden">
+            <!-- Fondo decorativo -->
+            <div class="absolute inset-0 pointer-events-none">
+                <div class="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-amber-900/10 blur-3xl"></div>
+                <div class="absolute -bottom-32 -left-32 w-[400px] h-[400px] rounded-full bg-amber-800/10 blur-3xl"></div>
+            </div>
+
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+                <!-- Cabecera de sección -->
+                <div class="text-center mb-12 md:mb-20">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 border border-gold/30 text-gold text-xs font-bold uppercase tracking-widest rounded-full mb-6">
+                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        Nuestra especialidad desde siempre
+                    </div>
+                    <h2 class="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-cream mb-6 leading-tight">
+                        Las auténticas<br><span class="italic text-ambar">Palmeritas de Morata</span><br>en Madrid
+                    </h2>
+                    <p class="text-muted text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
+                        Bañadas a mano en chocolate fondant y elaboradas a diario con la receta de siempre. Si las has probado en otro sitio, aún no las has probado de verdad.
+                    </p>
+                </div>
+
+                <!-- Grid principal -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16">
+
+                    <!-- Foto Palmeritas -->
+                    <div class="relative h-[380px] md:h-[480px] rounded-3xl overflow-hidden shadow-2xl group">
+                        <img src="./foto_palmeritas.jpg" onerror="this.src='./artisan_pastry.png'" alt="Palmeritas de Morata con Chocolate Fondant — Panadería La Pequeña Madrid" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <span class="inline-block px-3 py-1.5 bg-amber-500 text-white text-xs font-bold rounded-full tracking-wider shadow-lg">LAS MÁS VENDIDAS DE CHAMBERÍ</span>
+                        </div>
+                    </div>
+
+                    <!-- Texto y claims -->
+                    <div class="flex flex-col gap-6">
+                        <div class="bento-card p-6 md:p-8">
+                            <span class="text-gold text-xs font-bold uppercase tracking-widest block mb-3">¿Por qué las nuestras?</span>
+                            <h3 class="font-serif text-2xl text-cream mb-3">Receta original, sin atajos</h3>
+                            <p class="text-muted leading-relaxed">Las Palmeritas de Morata son un dulce clásico madrileño, y las nuestras se hacen exactamente como se hacían antes: hojaldre de calidad, bañado a mano en chocolate fondant el mismo día. Sin conservantes, sin atajos.</p>
+                        </div>
+                        <div class="bento-card p-6 md:p-8">
+                            <span class="text-gold text-xs font-bold uppercase tracking-widest block mb-3">Recién hechas cada mañana</span>
+                            <h3 class="font-serif text-2xl text-cream mb-3">Se acaban. Ven pronto.</h3>
+                            <p class="text-muted leading-relaxed">Madrugamos para que estén listas cuando abres la puerta. Los fines de semana vuelan antes de las 11. Si quieres asegurarte las tuyas, llama o escríbenos por WhatsApp.</p>
+                        </div>
+                        <a href="https://wa.me/34656614876?text=Hola%20Fernando%2C%20quer%C3%ADa%20reservar%20unas%20palmeritas%20de%20Morata"
+                           target="_blank"
+                           class="flex items-center justify-center gap-3 px-8 py-4 bg-green-600 hover:bg-green-500 text-white rounded-full font-bold text-base shadow-lg hover:-translate-y-1 transition-all active:scale-95">
+                            <svg class="w-6 h-6 flex-shrink-0 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                            Reservar mis Palmeritas
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Fila de prueba social específica de palmeritas -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-white/5 pt-12">
+                    <div class="text-center p-6">
+                        <div class="font-serif text-5xl text-ambar font-bold mb-2">4.9</div>
+                        <div class="text-cream text-sm font-medium mb-1">Valoración en Google</div>
+                        <div class="flex justify-center text-yellow-400 gap-0.5">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        </div>
+                    </div>
+                    <div class="text-center p-6 border-y sm:border-y-0 sm:border-x border-white/5">
+                        <div class="font-serif text-5xl text-ambar font-bold mb-2">+20</div>
+                        <div class="text-cream text-sm font-medium mb-1">Años en Chamberí</div>
+                        <div class="text-muted text-xs">Panadería de barrio de toda la vida</div>
+                    </div>
+                    <div class="text-center p-6">
+                        <div class="font-serif text-5xl text-ambar font-bold mb-2">0</div>
+                        <div class="text-cream text-sm font-medium mb-1">Atajos en la receta</div>
+                        <div class="text-muted text-xs">Hechas a mano cada mañana</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- E. Especialidades Reales del Mostrador (Bento Asimétrico) -->
         <section id="especialidades" class="py-16 md:py-24 bg-darkbg border-t border-white/5">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 
@@ -401,6 +543,12 @@
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                             </div>
                             <span class="text-lg tracking-widest">656 61 48 76</span>
+                        </a>
+                        <a href="https://www.instagram.com/panaderiapasteleria_la_pequena" target="_blank" rel="noopener" class="flex items-center gap-4 text-muted hover:text-gold transition-colors">
+                            <div class="w-10 h-10 border border-gold/30 rounded-full flex items-center justify-center text-gold">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+                            </div>
+                            <span class="text-sm font-medium">@panaderiapasteleria_la_pequena</span>
                         </a>
                     </div>
                 </div>
