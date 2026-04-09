@@ -211,6 +211,9 @@
                     <a href="#palmeritas" class="text-xs uppercase tracking-widest font-medium hover:text-gold transition-colors text-gold">Palmeritas</a>
                     <a href="#especialidades" class="text-xs uppercase tracking-widest font-medium hover:text-gold transition-colors">Mostrador</a>
                     <a href="#experiencia" class="text-xs uppercase tracking-widest font-medium hover:text-gold transition-colors">Opiniones</a>
+                    <a href="https://www.instagram.com/panaderiapasteleria_la_pequena" target="_blank" rel="noopener" class="hover:text-gold transition-colors opacity-70 hover:opacity-100" aria-label="Instagram">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-linecap="round" stroke-width="2"/></svg>
+                    </a>
                     <a href="https://wa.me/34656614876?text=Hola,%20quer%C3%ADa%20hacer%20un%20encargo" class="px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest transition-all shadow-lg hover:scale-105"
                        :class="scrolled ? 'bg-gold text-darkbg border border-gold' : 'bg-transparent text-gold border border-gold hover:bg-gold hover:text-darkbg'">
                         Reservar
@@ -241,7 +244,11 @@
                 <a @click="mobileMenuOpen = false" href="#palmeritas" class="block px-4 py-3 text-sm uppercase tracking-widest font-bold text-gold rounded-xl hover:bg-white/5 active:bg-white/10 transition-colors">★ Palmeritas de Morata</a>
                 <a @click="mobileMenuOpen = false" href="#especialidades" class="block px-4 py-3 text-sm uppercase tracking-widest font-medium text-cream rounded-xl hover:bg-white/5 active:bg-white/10 transition-colors">Mostrador</a>
                 <a @click="mobileMenuOpen = false" href="#experiencia" class="block px-4 py-3 text-sm uppercase tracking-widest font-medium text-cream rounded-xl hover:bg-white/5 active:bg-white/10 transition-colors">Opiniones</a>
-                <a @click="mobileMenuOpen = false" href="https://wa.me/34656614876" class="mt-4 block w-full text-center px-6 py-4 bg-gold text-darkbg text-sm tracking-widest uppercase font-bold rounded-2xl shadow-lg active:scale-95 transition-transform">
+                <a href="https://www.instagram.com/panaderiapasteleria_la_pequena" target="_blank" rel="noopener" @click="mobileMenuOpen = false" class="flex items-center gap-3 px-4 py-3 text-sm font-medium text-muted rounded-xl hover:bg-white/5 active:bg-white/10 transition-colors">
+                    <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-linecap="round" stroke-width="2"/></svg>
+                    @panaderiapasteleria_la_pequena
+                </a>
+                <a @click="mobileMenuOpen = false" href="https://wa.me/34656614876" class="mt-2 block w-full text-center px-6 py-4 bg-gold text-darkbg text-sm tracking-widest uppercase font-bold rounded-2xl shadow-lg active:scale-95 transition-transform">
                     Reservar Pedido
                 </a>
             </div>
