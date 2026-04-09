@@ -106,6 +106,13 @@
     <style>
         body { background-color: #251D14; }
         [x-cloak] { display: none !important; }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to   { opacity: 1; transform: translateY(0);    }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease forwards;
+        }
         .glass-nav {
             background-color: rgba(37, 29, 20, 0.95);
             backdrop-filter: blur(16px);
@@ -201,11 +208,11 @@
                     <span class="text-white text-sm font-semibold tracking-wide">La panadería de tu barrio · 4.9/5 en Google</span>
                 </div>
 
-                <h1 class="font-serif text-5xl md:text-7xl lg:text-7xl font-bold text-white mb-6 leading-[1.1] drop-shadow-2xl tracking-tight">
+                <h1 class="font-serif text-3xl sm:text-5xl md:text-7xl font-bold text-white mb-6 leading-[1.1] drop-shadow-2xl tracking-tight">
                     El hogar de las auténticas <span class="italic text-ambar">Palmeritas de Morata</span> en Chamberí
                 </h1>
                 
-                <p class="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
+                <p class="text-base sm:text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
                     Somos tu tahona de toda la vida. Horneamos a diario barras, empanadas caseras, Rosquillas de Alcalá y Pastas de Té artesanales.
                 </p>
                 
@@ -222,12 +229,12 @@
         </section>
 
         <!-- C. Trust & Bento Grid (Nosotros) -->
-        <section id="nosotros" class="py-24 bg-[#1F1811] relative z-20 -mt-10 border-t border-gold/10">
+        <section id="nosotros" class="py-16 md:py-24 bg-[#1F1811] relative z-20 -mt-10 border-t border-gold/10">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <div class="flex flex-col md:flex-row gap-16 items-center mb-16">
+                <div class="flex flex-col md:flex-row gap-8 md:gap-16 items-center mb-12 md:mb-16">
                     <div class="md:w-1/2">
-                        <img src="./foto_letrero.jpg" onerror="this.src='./artisan_pastry.png'" alt="Letrero Interior" class="rounded-sm shadow-2xl object-cover w-full h-[400px] border border-gold/20">
+                        <img src="./foto_letrero.jpg" onerror="this.src='./artisan_pastry.png'" alt="Letrero Interior" class="rounded-sm shadow-2xl object-cover w-full h-[240px] md:h-[400px] border border-gold/20">
                     </div>
                     <div class="md:w-1/2">
                         <div class="text-gold text-xs font-bold uppercase tracking-widest mb-4 flex items-center gap-2">
@@ -253,10 +260,10 @@
         </section>
 
         <!-- D. Especialidades Reales del Mostrador (Bento Asimétrico) -->
-        <section id="especialidades" class="py-24 bg-darkbg border-t border-white/5">
+        <section id="especialidades" class="py-16 md:py-24 bg-darkbg border-t border-white/5">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-10 md:mb-16">
                     <div class="max-w-xl">
                         <div class="text-gold text-xs font-bold uppercase tracking-widest mb-4 flex items-center gap-2">
                             <hr class="w-8 border-gold"> NUESTRAS VITRINAS
@@ -269,10 +276,10 @@
                     </a>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[360px]">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:auto-rows-[360px]">
                     
                     <!-- Tarjeta Palmeritas (Foto Real) -->
-                    <div class="md:col-span-7 bento-card relative overflow-hidden group">
+                    <div class="md:col-span-7 h-[340px] md:h-auto bento-card relative overflow-hidden group">
                         <!-- Reemplazar con foto_palmeritas.jpg -->
                         <img src="./foto_palmeritas.jpg" onerror="this.src='./artisan_pastry.png'" alt="Palmeritas de Morata con Chocolate" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
@@ -284,7 +291,7 @@
                     </div>
 
                     <!-- Tarjeta Empanada (Foto Real) -->
-                    <div class="md:col-span-5 bento-card relative overflow-hidden group bg-cream">
+                    <div class="md:col-span-5 h-[280px] md:h-auto bento-card relative overflow-hidden group bg-cream">
                         <!-- Reemplazar con foto_empanada.jpg -->
                         <img src="./foto_empanada.jpg" onerror="this.src='./artisan_pastry.png'" alt="Empanada de Atún Gigante" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
@@ -315,11 +322,11 @@
         </section>
 
         <!-- E. Interés / Prueba Social Potenciada -->
-        <section id="experiencia" class="py-24 bg-[#1F1811] relative border-t border-white/5">
+        <section id="experiencia" class="py-16 md:py-24 bg-[#1F1811] relative border-t border-white/5">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                     <div>
-                        <div class="inline-block px-4 py-1.5 border border-gold/30 text-gold text-xs font-bold uppercase tracking-widest rounded-full mb-6 flex items-center w-max gap-2">
+                        <div class="inline-flex px-4 py-1.5 border border-gold/30 text-gold text-xs font-bold uppercase tracking-widest rounded-full mb-6 items-center w-max gap-2">
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                             Valoración de 4.9/5
                         </div>
@@ -334,7 +341,7 @@
 
                     <div class="space-y-6">
                         <!-- Review 1 -->
-                        <div class="elegant-card p-8 group hover:-translate-y-1 transition-transform">
+                        <div class="elegant-card p-6 md:p-8 group hover:-translate-y-1 transition-transform">
                             <div class="flex text-gold mb-3 gap-1">
                                 <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                                 <span class="font-medium text-cream ml-2">5.0</span>
@@ -350,7 +357,7 @@
                         </div>
 
                         <!-- Review 2 -->
-                        <div class="elegant-card p-8 group hover:-translate-y-1 transition-transform ml-0 md:ml-8">
+                        <div class="elegant-card p-6 md:p-8 group hover:-translate-y-1 transition-transform ml-0 md:ml-8">
                             <div class="flex text-gold mb-3 gap-1">
                                 <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                                 <span class="font-medium text-cream ml-2">5.0</span>
@@ -371,10 +378,10 @@
     </main>
 
     <!-- F. CTA Final & Contact & Google Maps -->
-    <footer id="contacto" class="bg-darkbg text-cream pt-24 relative border-t border-white/10">
+    <footer id="contacto" class="bg-darkbg text-cream pt-16 md:pt-24 relative border-t border-white/10">
 
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 mb-12 lg:mb-16">
                 
                 <div>
                     <h3 class="font-serif text-4xl font-medium text-cream mb-6">Panadería <span class="text-gold italic">La Pequeña</span></h3>
