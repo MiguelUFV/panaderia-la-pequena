@@ -655,6 +655,27 @@
         </div>
     </footer>
 
+    <!-- H. Banner Cookies (RGPD) -->
+    <div id="cookie-banner" x-data="{ visible: !localStorage.getItem('cookies_ok') }" x-show="visible" x-cloak
+         class="fixed bottom-0 left-0 right-0 z-[70] bg-[#18120d] border-t border-gold/10 px-4 py-4 md:py-3">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+            <p class="text-muted text-xs leading-relaxed">
+                Usamos cookies propias y de terceros (Google Analytics) para analizar el tráfico y mejorar tu experiencia.
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="text-gold underline hover:no-underline">Más info</a>
+            </p>
+            <div class="flex gap-2 flex-shrink-0">
+                <button @click="visible = false; localStorage.setItem('cookies_ok', '1')"
+                        class="px-5 py-2 bg-gold text-darkbg text-xs font-bold uppercase tracking-widest rounded-full hover:bg-goldhover transition-colors active:scale-95">
+                    Aceptar
+                </button>
+                <button @click="visible = false"
+                        class="px-5 py-2 bg-transparent border border-white/10 text-muted text-xs font-bold uppercase tracking-widest rounded-full hover:border-white/30 transition-colors active:scale-95">
+                    Rechazar
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- G. Botón Whatsapp Flotante -->
     <a href="https://wa.me/34656614876?text=Hola,%20me%20gustar%C3%ADa%20hacer%20un%20encargo%20de%20palmeritas%20y%20empanada" target="_blank"
        class="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-[60] bg-darkbg text-gold border border-gold/40 p-4 rounded-full shadow-[0_10px_30px_rgba(197,154,90,0.2)] md:hover:scale-110 md:hover:-translate-y-2 active:scale-95 transition-all duration-300 flex items-center justify-center group"
