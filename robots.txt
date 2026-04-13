@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://panaderia-la-pequena.vercel.app/sitemap.xml
+Sitemap: https://panaderialapequeña.es/sitemap.xml
