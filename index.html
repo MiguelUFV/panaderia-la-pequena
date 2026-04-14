@@ -125,39 +125,20 @@
         gtag('config', 'G-J2Y2P4DLD0');
     </script>
 
-    <!-- Google Fonts -->
+    <!-- Preconnect CDN domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
-    <!-- Tailwind CSS (Vía CDN) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        cream: '#F4EBE1',
-                        corteza: '#8B5A2B',
-                        ambar: '#CD853F',
-                        gold: '#C59A5A',
-                        goldhover: '#E3B87A',
-                        darkbg: '#251D14',
-                        carbon: '#1a1a1a',
-                        muted: '#A9A098',
-                    },
-                    fontFamily: {
-                        sans: ['Montserrat', 'sans-serif'],
-                        serif: ['Cormorant Garamond', 'serif']
-                    },
-                    boxShadow: {
-                        'bento': '0 10px 40px -10px rgba(0, 0, 0, 0.08)',
-                        'float': '0 20px 40px -5px rgba(0,0,0,0.2)',
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- Preload LCP image -->
+    <link rel="preload" as="image" href="./foto_fachada.webp" fetchpriority="high">
+
+    <!-- Google Fonts (no-render-block) -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" onload="this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet"></noscript>
+
+    <!-- Tailwind CSS (compilado estático, sin JS de bloqueo) -->
+    <link rel="stylesheet" href="./tailwind.min.css">
 
     <!-- Alpine.js -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -267,7 +248,7 @@
         <section class="relative min-h-screen flex items-center pt-20 pb-10 md:pt-0 md:pb-0 overflow-hidden">
             <!-- Background: Fachada Real -->
             <div class="absolute inset-0 z-0">
-                <img src="./foto_fachada.webp" onerror="this.src='./hero_panaderia.png'" alt="Fachada Panadería La Pequeña" class="w-full h-full object-cover scale-105 transition-transform duration-[20s] ease-out hover:scale-110 blur-[1px]">
+                <img src="./foto_fachada.webp" fetchpriority="high" alt="Fachada Panadería La Pequeña" class="w-full h-full object-cover scale-105 transition-transform duration-[20s] ease-out hover:scale-110 blur-[1px]">
                 <div class="absolute inset-0 bg-stone-950/70 bg-gradient-to-t from-stone-950 via-stone-900/60 to-transparent"></div>
             </div>
             
@@ -340,7 +321,7 @@
                 
                 <div class="flex flex-col md:flex-row gap-8 md:gap-16 items-center mb-12 md:mb-16">
                     <div class="md:w-1/2">
-                        <img src="./foto_portada.webp" alt="Letrero La Pequeña Chamberí" class="rounded-sm shadow-2xl object-cover object-center w-full h-[240px] md:h-[400px] border border-gold/20">
+                        <img loading="lazy" src="./foto_portada.webp" alt="Letrero La Pequeña Chamberí" class="rounded-sm shadow-2xl object-cover object-center w-full h-[240px] md:h-[400px] border border-gold/20">
                     </div>
                     <div class="md:w-1/2">
                         <div class="text-gold text-xs font-bold uppercase tracking-widest mb-4 flex items-center gap-2">
@@ -394,7 +375,7 @@
 
                     <!-- Foto Palmeritas -->
                     <div class="relative h-[380px] md:h-[480px] rounded-3xl overflow-hidden shadow-2xl group">
-                        <img src="./foto_real.webp" onerror="this.src='./artisan_pastry.png'" alt="Palmeritas de Morata con Chocolate Fondant — Panadería La Pequeña Madrid" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <img loading="lazy" src="./foto_real.webp" onerror="this.src='./artisan_pastry.png'" alt="Palmeritas de Morata con Chocolate Fondant — Panadería La Pequeña Madrid" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
                         <div class="absolute bottom-6 left-6 right-6">
                             <span class="inline-block px-3 py-1.5 bg-amber-500 text-white text-xs font-bold rounded-full tracking-wider shadow-lg">PASTELERÍA REAL · MORATA</span>
@@ -472,7 +453,7 @@
                     <!-- Tarjeta Palmeritas (Foto Real) -->
                     <div class="md:col-span-7 h-[340px] md:h-auto bento-card relative overflow-hidden group">
                         <!-- Reemplazar con foto_palmeritas.webp -->
-                        <img src="./foto_real.webp" onerror="this.src='./artisan_pastry.png'" alt="Palmeritas de Morata con Chocolate" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <img loading="lazy" src="./foto_real.webp" onerror="this.src='./artisan_pastry.png'" alt="Palmeritas de Morata con Chocolate" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
                         <div class="absolute bottom-0 left-0 p-8 w-full">
                             <span class="inline-block px-3 py-1 bg-amber-500/90 text-white text-xs font-bold rounded-full mb-3 shadow-md tracking-wider">LAS MÁS BUSCADAS</span>
@@ -483,7 +464,7 @@
 
                     <!-- Tarjeta Napolitanas -->
                     <div class="md:col-span-5 h-[280px] md:h-auto bento-card relative overflow-hidden group">
-                        <img src="./foto_napolitanas.webp" alt="Napolitanas Dulces y Saladas" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <img loading="lazy" src="./foto_napolitanas.webp" alt="Napolitanas Dulces y Saladas" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
                         <div class="absolute bottom-0 left-0 p-8 w-full">
                             <span class="inline-block px-3 py-1 bg-white/20 backdrop-blur-md text-white text-xs font-bold rounded-full mb-3 border border-white/30">Dulces y Saladas</span>
@@ -495,7 +476,7 @@
                     <!-- Tarjeta Donuts -->
                     <div class="md:col-span-12 lg:col-span-12 bento-card relative overflow-hidden bg-ambar group mt-2 flex flex-col md:flex-row items-center border border-amber-800/10">
                         <div class="relative w-full h-[250px] md:absolute md:right-0 md:top-0 md:h-full md:w-[60%] z-0 order-1 md:order-2 opacity-90 md:opacity-100">
-                           <img src="./foto_masdonuts.webp" class="w-full h-full object-cover object-center" alt="Donuts y Agujeros de Morata">
+                           <img loading="lazy" src="./foto_masdonuts.webp" class="w-full h-full object-cover object-center" alt="Donuts y Agujeros de Morata">
                            <div class="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-ambar via-ambar/40 md:via-ambar/80 to-transparent"></div>
                         </div>
                         <div class="flex-1 p-8 md:p-12 z-10 w-full md:w-[45%] order-2 md:order-1 relative">
@@ -513,7 +494,7 @@
                         <div class="grid grid-cols-2 h-full">
                             <!-- Foto izquierda con texto -->
                             <div class="relative overflow-hidden group">
-                                <img src="./foto_pan1.webp" alt="Pan artesanal de masa madre — Panadería La Pequeña" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                <img loading="lazy" src="./foto_pan1.webp" alt="Pan artesanal de masa madre — Panadería La Pequeña" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                                 <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-transparent"></div>
                                 <div class="absolute bottom-0 left-0 p-4 md:p-8">
                                     <span class="inline-block px-3 py-1 bg-amber-500/90 text-white text-xs font-bold rounded-full mb-2 tracking-wider">Horneado cada mañana</span>
@@ -523,14 +504,14 @@
                             </div>
                             <!-- Foto derecha limpia -->
                             <div class="relative overflow-hidden group border-l-2 border-[#251D14]/60">
-                                <img src="./foto_pan2.webp" alt="Pan recién horneado — Panadería La Pequeña" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                <img loading="lazy" src="./foto_pan2.webp" alt="Pan recién horneado — Panadería La Pequeña" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                             </div>
                         </div>
                     </div>
 
                     <!-- Tarjeta Magdalena -->
                     <div class="md:col-span-6 h-[300px] md:h-auto bento-card relative overflow-hidden group">
-                        <img src="./foto_magdalena.webp" alt="Magdalena Casera 1€" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <img loading="lazy" src="./foto_magdalena.webp" alt="Magdalena Casera 1€" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
                         <div class="absolute bottom-0 left-0 p-6 w-full">
                             <span class="inline-block px-3 py-1 bg-white/20 backdrop-blur-md text-white text-xs font-bold rounded-full mb-3 border border-white/30">1€ / Unidad</span>
@@ -541,7 +522,7 @@
 
                     <!-- Tarjeta Croissant -->
                     <div class="md:col-span-6 h-[300px] md:h-auto bento-card relative overflow-hidden group">
-                        <img src="./foto_croissant.webp" alt="Croissant Francés 1,90€" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <img loading="lazy" src="./foto_croissant.webp" alt="Croissant Francés 1,90€" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
                         <div class="absolute bottom-0 left-0 p-6 w-full">
                             <span class="inline-block px-3 py-1 bg-white/20 backdrop-blur-md text-white text-xs font-bold rounded-full mb-3 border border-white/30">1,90€ / Unidad</span>
@@ -566,13 +547,13 @@
                             <!-- 3 fotos en fila -->
                             <div class="grid grid-cols-3 md:w-[65%] h-[200px] md:h-[300px]">
                                 <div class="relative overflow-hidden">
-                                    <img src="./foto_pastas1.webp" alt="Pastas de Té artesanales — La Pequeña" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                                    <img loading="lazy" src="./foto_pastas1.webp" alt="Pastas de Té artesanales — La Pequeña" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
                                 </div>
                                 <div class="relative overflow-hidden border-x border-[#251D14]/60">
-                                    <img src="./foto_pastas2.webp" alt="Pastas de Té variadas — La Pequeña" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                                    <img loading="lazy" src="./foto_pastas2.webp" alt="Pastas de Té variadas — La Pequeña" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
                                 </div>
                                 <div class="relative overflow-hidden">
-                                    <img src="./foto_pastas3.webp" alt="Selección de Pastas de Té — La Pequeña" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                                    <img loading="lazy" src="./foto_pastas3.webp" alt="Selección de Pastas de Té — La Pequeña" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
                                 </div>
                             </div>
                         </div>
@@ -580,7 +561,7 @@
 
                     <!-- Tarjeta Chocolate Blanco -->
                     <div class="md:col-span-12 h-[300px] md:h-[280px] bento-card relative overflow-hidden group">
-                        <img src="./foto_chocolate_blanco.webp" alt="Palmeritas de Chocolate Blanco 1,60€" class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
+                        <img loading="lazy" src="./foto_chocolate_blanco.webp" alt="Palmeritas de Chocolate Blanco 1,60€" class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
                         <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
                         <div class="absolute bottom-0 left-0 p-6 md:p-10 w-full md:w-1/2">
                             <span class="inline-block px-3 py-1 bg-white/20 backdrop-blur-md text-white text-xs font-bold rounded-full mb-3 border border-white/30">1,60€ / Unidad</span>
