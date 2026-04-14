@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #F4EBE1;
+  --color-corteza: #8B5A2B;
+  --color-ambar: #CD853F;
+  --color-gold: #C59A5A;
+  --color-goldhover: #E3B87A;
+  --color-darkbg: #251D14;
+  --color-carbon: #1a1a1a;
+  --color-muted: #A9A098;
+
+  --font-sans: Montserrat, sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+
+  --shadow-bento: 0 10px 40px -10px rgba(0,0,0,0.08);
+  --shadow-float: 0 20px 40px -5px rgba(0,0,0,0.2);
+}
