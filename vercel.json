@@ -1,3 +1,11 @@
 {
-  "name": "panaderia-la-pequena"
+  "name": "panaderia-la-pequena",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.xn--panaderialapequea-uxb.es" }],
+      "destination": "https://xn--panaderialapequea-uxb.es/:path*",
+      "permanent": true
+    }
+  ]
 }

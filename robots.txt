@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://panaderialapequeña.es/sitemap.xml
+Sitemap: https://xn--panaderialapequea-uxb.es/sitemap.xml
